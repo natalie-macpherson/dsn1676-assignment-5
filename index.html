@@ -9,16 +9,28 @@
 <h1>To-do List:</h1>
 
 <form class="form">
-	<label for="list"></lable>
-	<input class="item" id="list">
+	<label for="list"></label>
+	<input class="item" id="list"></input>
 	<button type="submit">Add</button>
 </form>
 
-<div>
-	<ul class="to-do-list"></ul>
-	<input type="radio" id="delete">Delete</button>
-</div>
+<ol class="to-do-list"></ol>
+
+<script id="template" type="x-tmpl-mustache">
+	{{#toDoList}}
+		<li class="{{class}}">
+			<p>{{name}}</p>
+			 <button class="btn">Delete!</button>
+			// <input type="radio" id="delete">Delete</input>
+		</li>
+	{{/toDoList}}
+</script>
+
+
+
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/mustache.min.js"></script>
 </body>
 </html>
