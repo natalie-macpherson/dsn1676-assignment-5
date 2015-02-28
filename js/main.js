@@ -31,9 +31,17 @@
 var $form = $('.form');
 var $list = $('.list');
 var $add = $('.add');
-var $button = $('. addbtn');
+var $button = $('.addbtn');
 
 $form.on('submit', function(e){
   e.preventDefault();
-  console.log ('submitted');
-})
+
+  var $addValue = $add.val();
+  var $li = $('<li>');
+  var $addH2 = $('<h2>').html($add.val());
+
+  $li.append($addH2);
+  $add.append($li);
+  //console.log($addH2);
+
+});
