@@ -48,8 +48,13 @@ $form.on('submit', function(e){
     $li.remove();
   })
 
+  $addH2.on('click', function(){
+    $addH2.addClass('stike') ();
+  })
+
   $li.append($addH2);
   $add.append($li);
-  console.log($button);
+  $addH2.append($button);
+  //console.log($button);
 
 });
