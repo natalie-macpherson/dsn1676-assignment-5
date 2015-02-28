@@ -39,9 +39,17 @@ $form.on('submit', function(e){
   var $addValue = $add.val();
   var $li = $('<li>');
   var $addH2 = $('<h2>').html($add.val());
+  var $button = $('<button>');
+
+  $button.html('&#x2717');
+  $button.addClass('done');
+
+  $button.on('click', function(){
+    $li.remove();
+  })
 
   $li.append($addH2);
   $add.append($li);
-  //console.log($addH2);
+  console.log($button);
 
 });
