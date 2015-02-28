@@ -1,44 +1,67 @@
-// var $form = $('.form');
-// var $toDoList = $('.to-do-list');
-// var $list = $('#list');
-// var $delete = $('#delete');
-// var template = $('#template').html();
-// Mustache.parse(template);
+html {
+	box-sizing: html {
+	  box-sizing: border-box;
+	}
+
+	*, *::before, *::after {
+	  box-sizing: inherit;
+	};
+}
+
+body {
+	margin: 0;
+	background-color: orange;
+}
+
+html {
+	box-sizing: html {
+		box-sizing: border-box;
+	}
+
+	*, *::before, *::after {
+	  box-sizing: inherit;
+	};
+}
+
+body {
+	margin: 0;
+	background-color: orange;
+}
+
+.bg{
+	border: black solid 2px;
+	margin: 3rem;
+	border-radius: 19px;
+	background-color: white;
+}
+
+.grey{
+	background-color: gray;
+	padding: 2rem 2rem 1rem 2rem;
+	border-radius: 16px 16px 0 0;
+}
 
 
-// $form.on('submit', function (e) {
-// 	e.preventDefault ();
-// 	var $toDoListLi = $('<li>').html($list.val());
-// 	$('ul').append($toDoListLi);
-// });
+.title{
+	display: block;
+	text-align: center;
+	font-size: 1.75rem;
+	padding-top: .25rem;
+	padding-bottom: .25rem;
+	line-height: 1.75rem;
+}
 
+.item {
+	height: 2.25rem;
+	width: 70%;
+	border:2px solid red;
+	font-size: 1rem;
+	font-family: Georgia, serif;
+	padding-left: .5rem;
+}
 
-// $( "#delete" ).click(function() {
-//   $( "li" ).remove();
-// });
+li {
+	list-style-type: none;
+	padding-left: 2rem;
+}
 
-//  //$form.on('click', function(e){
-//  	//$toDoList.css ('color', 'gray');
-//  //});
-
-
-var $form = $('.form');
-var $name = $('.name');
-var $toDoList = $('.to-do-list');
-
-var template = $('#template').html();
-Mustache.parse(template);
-
-$form.on('submit', function (e) {
-  e.preventDefault();
-  var $toDoListLi = $('<li>').html($list.val());
-	$('ul').append($toDoListLi);
-
-  //var toDoListItem = {
-  	//$toDoListItem = $('<li>').html($list.val());
-    //name: $name.val(),
-		//$('ul').append($toDoListLi);
-  //};
-
-  $toDoList.append(Mustache.render(template, toDoList));
-});

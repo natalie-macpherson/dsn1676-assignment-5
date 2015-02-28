@@ -1,37 +1,3 @@
-<!--<!DOCTYPE html>
-<html lang="en-ca">
-<head>
-  <meta charset="utf-8">
-  <title>To Do List</title>
-  <link href="css/main.css" rel="stylesheet">
-</head>
-<body>
-<h1>To-do List:</h1>
-
-<form class="form">
-	<label for="list"></label>
-	<input class="item" id="list"></input>
-	<button type="submit">Add</button>
-</form>
-
-<ol class="to-do-list"></ol>
-
-<script id="template" type="x-tmpl-mustache">
-	{{#toDoList}}
-		<li class="{{class}}">
-			<p>{{name}}</p>
-			 <button class="btn">Delete!</button>
-			// <input type="radio" id="delete">Delete</input>
-		</li>
-	{{/toDoList}}
-</script>
-
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/mustache.min.js"></script>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 <html lang="en-ca">
 <head>
@@ -44,7 +10,7 @@
 	<div class="bg">
 		<form class="form" method="post" action="#">
 			<div class="grey">
-				<label for="title for=todo">To Do:</label>
+				<label class="title" for="title">To Do:</label>
 				<input class="item" id="item"></input>
 				<button class="addbtn" type="submit">Add</button>
 			</div>
