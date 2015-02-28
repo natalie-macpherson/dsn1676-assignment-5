@@ -29,16 +29,18 @@
 //});
 
 var $form = $('.form');
-var $list = $('.list');
+var $item = $('.item');
 var $add = $('.add');
 var $button = $('.addbtn');
+//var $listLi = $('.add li');
+//console.log($listLi);
 
 $form.on('submit', function(e){
   e.preventDefault();
 
   var $addValue = $add.val();
   var $li = $('<li>');
-  var $addH2 = $('<h2>').html($add.val());
+  var $addH2 = $('<h2>').html($item.val());
   var $button = $('<button>');
 
   $button.html('&#x2717');
@@ -48,13 +50,16 @@ $form.on('submit', function(e){
     $li.remove();
   })
 
-  $addH2.on('click', function(){
-    $addH2.addClass('stike') ();
-  })
+  //$addH2.on('click', function(){
+    //$addH2.addClass('strike') ();
+  //});
 
   $li.append($addH2);
   $add.append($li);
   $addH2.append($button);
-  //console.log($button);
 
 });
+
+$add.on('click', 'li', function(){
+  $(this).addClass('strike');
+})
