@@ -79,7 +79,8 @@ li {
 }
 
 .addbtn:hover{
-	background-color: green;
+	background-color: #727272;
+	color:white;
 }
 
 .done {
@@ -93,6 +94,11 @@ li {
 	margin-right: 1.75rem;
 	height: 2.75rem;
 	font-size: 1.25rem;
+}
+
+.done:hover{
+	background-color: #727272;
+	color:white;
 }
 
 .strike {
